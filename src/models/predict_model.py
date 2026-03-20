@@ -1,7 +1,7 @@
 import joblib
 import numpy as np
 
-model = joblib.load("models/modelo_logistico.joblib")
+model = joblib.load("models/modelo_logistico.pkl")
 
 def predict(horas_estudio):
    data = np.array([[horas_estudio]])
