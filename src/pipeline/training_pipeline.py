@@ -10,10 +10,13 @@ def run_training():
     X, y = prepare_data(df)
     model, X_test, y_test = train_model(X, y)
     acc, cm, report = evaluate(model, X_test, y_test)
+    
     print("Accuracy:", acc)
     print("Confusion Matrix:\n", cm)
     print("Classification Report:\n", report)
+    
     joblib.dump(model, "models/modelo_logistico.pkl")
     print("Modelo guardado correctamente")
-    if __name__ == "__main__":
-        run_training()
+    
+if __name__ == "__main__":
+    run_training()
